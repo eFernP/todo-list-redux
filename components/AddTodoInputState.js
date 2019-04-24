@@ -1,34 +1,32 @@
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
-import { addTodo, clearInput } from '../actions';
+import React, { Component } from "react";
+import { StyleSheet, View, TextInput } from "react-native";
 
 type Props = {};
 export default class AddTodoInputState extends Component<Props> {
+  state = {
+    input: ""
+  };
 
-  state={
-    input : ''
-  }
-
-  updateInput = (text)  => {
+  updateInput = text => {
     this.setState({
-        input : text
+      input: text
     });
-  }
+  };
 
   render() {
     return (
       <View>
-         <TextInput 
-        style={styles.text}
-        value={this.state.input}
-        onChangeText={(text) => this.updateInput(text)} 
-        onSubmitEditing={()=>{
+        <TextInput
+          style={styles.text}
+          value={this.state.input}
+          onChangeText={text => this.updateInput(text)}
+          onSubmitEditing={() => {
             this.props.onSubmit(this.state.input);
             this.setState({
-                input: ''
-            })
-        }} 
-        placeholder="Add a todo (component with state)"
+              input: ""
+            });
+          }}
+          placeholder="Add a todo"
         />
       </View>
     );
@@ -36,11 +34,10 @@ export default class AddTodoInputState extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-    text:{
-      fontSize: 18,
-      flex: 1,
-      justifyContent: 'center',
-      margin: '5%',
-  
-    }
-  });
+  text: {
+    fontSize: 18,
+    flex: 1,
+    justifyContent: "center",
+    margin: "5%"
+  }
+});

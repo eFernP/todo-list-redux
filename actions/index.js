@@ -1,32 +1,32 @@
 let nextTodo = 0;
 
 export const addTodo = text => ({
-  type: 'ADD_TODO',
+  type: "ADD_TODO",
   id: nextTodo++,
   text
-})
+});
 export const updateInput = text => ({
-  type: 'UPDATE_INPUT',
+  type: "UPDATE_INPUT",
   text
-})
+});
 
 export const clearInput = () => ({
-  type: 'CLEAR_INPUT',
-  text: ''
-})
+  type: "CLEAR_INPUT",
+  text: ""
+});
 
 export const setVisibilityFilter = filter => ({
-  type: 'SET_VISIBILITY_FILTER',
+  type: "SET_VISIBILITY_FILTER",
   filter
-})
+});
 
 export const toggleTodo = id => ({
-  type: 'TOGGLE_TODO',
+  type: "TOGGLE_TODO",
   id
-})
+});
 
 export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-}
+  SHOW_ALL: "SHOW_ALL",
+  SHOW_COMPLETED: "SHOW_COMPLETED",
+  SHOW_ACTIVE: "SHOW_ACTIVE"
+};
