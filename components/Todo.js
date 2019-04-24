@@ -6,12 +6,16 @@ const Todo = ({ onPress, completed, text }) => (
   <Text
     onPress={onPress}
     style={{
+      fontSize: 16,
+      marginHorizontal: 20,
+      marginBottom: 10,
       textDecorationLine: completed ? 'line-through' : 'none'
     }}
   >
     {text}
   </Text>
 )
+
 
 Todo.propTypes = {
   onPress: PropTypes.func.isRequired,

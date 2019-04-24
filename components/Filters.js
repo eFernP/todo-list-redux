@@ -3,8 +3,8 @@ import FilterLink from '../containers/FilterLink';
 import { VisibilityFilters } from '../actions';
 import {View, StyleSheet} from 'react-native';
 
-const Footer = () => (
-  <View style={styles.footer}>
+const Filters = () => (
+  <View style={styles.container}>
     <View style={styles.filterContainer}>
     <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
     </View>
@@ -18,9 +18,7 @@ const Footer = () => (
 )
 
 const styles = StyleSheet.create({
-    footer: {
-      position: 'absolute',
-      bottom: 20,
+    container: {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center'
@@ -37,4 +35,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default Footer;
+export default Filters;

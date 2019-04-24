@@ -13,7 +13,8 @@ import { createStore } from 'redux';
 import rootReducer from './reducers';
 import VisibleTodoList from './containers/VisibleTodoList';
 import AddTodo from './containers/AddTodo';
-import Footer from './components/Footer';
+import Filters from './components/Filters';
+import Header from './components/Header';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -31,9 +32,8 @@ export default class App extends Component<Props> {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <AddTodo/>
+          <Header/>
           <VisibleTodoList/>
-          <Footer/>
         </View>
       </Provider>
     );

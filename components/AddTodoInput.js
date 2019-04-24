@@ -7,8 +7,9 @@ import { addTodo, clearInput, updateInput } from '../actions';
 const AddTodoInput = ({ textInputAdd, dispatch }) => {
 
   return (
-    <View>
+    <View sytle={styles.container}>
         <TextInput 
+        style={styles.text}
         value={textInputAdd}
         onChangeText={(text) => dispatch(updateInput(text))} 
         onSubmitEditing={()=>{
@@ -21,4 +22,14 @@ const AddTodoInput = ({ textInputAdd, dispatch }) => {
   )
 }
 
-export default AddTodoInput
+const styles = StyleSheet.create({
+  text:{
+    fontSize: 18,
+    flex: 1,
+    justifyContent: 'center',
+    margin: '5%',
+
+  }
+});
+
+export default AddTodoInput;
